@@ -1,4 +1,6 @@
-#Utworzyæ wykresy gêstoœci, dystrybuanty i funkcji prze¿ycia dla zmiennych losowych o rozk³adzie normalnym 
+ #plots: Cumulative distribution function,  Probability density function
+
+#UtworzyÃ¦ wykresy gÃªstoÅ“ci, dystrybuanty i funkcji przeÂ¿ycia dla zmiennych losowych o rozkÂ³adzie normalnym 
 #z parametrami: N(0,1) , N(1,1) , N(2,1) N(0,1) , N(0,0.5) , N(0,2) . 
 
 
