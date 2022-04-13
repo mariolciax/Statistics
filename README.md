@@ -1,1 +1,3 @@
-# Programms was preperad at university.
+# Statistic
+
+## Programs were prepared for the needs of the university.
