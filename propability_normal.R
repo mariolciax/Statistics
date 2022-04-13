@@ -20,7 +20,7 @@ propability_normal_upper <- function(value_upper, mean_, sd_){
   p1<-pnorm(value_upper,mean= mean_,sd = sd_ ,lower.tail=FALSE)
   return(p1)
 }
-#b)
+#c)
 propability_normal_upper(181,173,6)
 
 
@@ -29,3 +29,5 @@ quantile_normal<- function(q, mean_, sd_){
   return(qnorm(q/100, mean_, sd_))
   
 }
+#d)
+quantile_normal(60,173,6)
