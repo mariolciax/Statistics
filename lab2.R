@@ -72,3 +72,5 @@ b<-q3+1.5 *iqr
 b_p<-butelki$presure[(butelki$presure>=a)&(butelki$presure<=b)]
 
 boxplot(b_p, horizontal =TRUE)
+
+pr<- butelki$presure[which((butelki$presure<=a)|(butelki$presure>=b))]
