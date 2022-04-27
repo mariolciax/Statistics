@@ -1,8 +1,8 @@
-#The most imortant
+#The most important
 # functions : sort , order, quantile, IQR, mean(trim), median, summary, diff(range())
 # df$col_name<-df$col_name*value
 # pie, barplot, hist, stem, boxplot
-#hist!!!- we can save hist to variable and next use its elements to draw line or other
+#hist!!!- we can save hist to variable and next use  elements of this variable to draw line or other
 #lines(x,y, lwd=2)
 
 
