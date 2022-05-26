@@ -23,7 +23,7 @@ ind<-sample(1:n,n,replace=T)
 srednia_boot<- c(srednia_boot, mean(waga[ind]))
 }
 srednia_boot
-alpha<-0.1
+alpha<-0.07
 #kwantyle
 quantile(srednia_boot,c(alpha/2,1-alpha/2))
 
@@ -37,6 +37,37 @@ quantile(srednia_boot,c(alpha/2,1-alpha/2))
 przedzial_war<-c((n-1)*var(waga)/qchisq(1-alpha/2,n-1), (n-1)*var(waga)/qchisq(alpha/2,n-1))
 przedzial_war
 
-
 przedzial_sd<-sqrt(przedzial_war)
 przedzial_sd
+
+
+
+#porownanie bootstrapowe - odchylenie
+srednia_boot<-c()
+for (i in 1:B){
+  ind<-sample(1:n,n,replace=T)
+  srednia_boot<- c(srednia_boot, sd(waga[ind]))
+}
+alpha<-0.07
+#kwantyle
+quantile(srednia_boot,c(alpha/2,1-alpha/2))
+
+
+#porownanie bootstrapowe - wariancja
+srednia_boot<-c()
+for (i in 1:B){
+  ind<-sample(1:n,n,replace=T)
+  srednia_boot<- c(srednia_boot, var(waga[ind]))
+}
+alpha<-0.07
+#kwantyle
+quantile(srednia_boot,c(alpha/2,1-alpha/2))
+
+#testowanie NADAL t.test
+#H_1: mu=270, H_1: mu!=270
+t.test(waga, mu=270,conf.level = 0.9)
+#nie mamy podstaw aby odrzucic bo p-value=0.1272 wieksze niz alfa
+#sobie sprawdzimy ze to 270 lezy w przedziale
+t.test(waga, conf.level = 0.9)
+
+
